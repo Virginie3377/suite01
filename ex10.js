@@ -45,8 +45,22 @@ shoppingList([
 ]);
 
 //  écrire votre code sous ce commentaire
+function shoppingList(panier) {
+    var fruitsList = {};
+    for (let i = 0; i < panier.length; i++) {
+        for (let j = 0; j < panier[i].length; j++) {
+            if (fruitsList.hasOwnProperty(panier[i][j])) {
+                fruitsList[panier[i][j]]++;
+            } else {
+                fruitsList[panier[i][j]] = 1;
+            }
+        }
+    }
+    console.log(fruitsList);
+    return fruitsList;
+}
 
-var o = 0;
+/*var o = 0;
 var k = 0;
 var a = 0;
 var p = 0;
@@ -89,4 +103,4 @@ console.log(shoppingList([
     ["orange", "orange", "orange", "orange"],
     ["orange", "orange", "kiwi", "kiwi"],
     ["prune", "banane", "pamplemousse", "ananas"]
-]));
+]));*/
