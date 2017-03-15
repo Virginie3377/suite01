@@ -55,7 +55,7 @@ getHumanTypeByAge(140);
 
 
 function getHumanTypeByAge(nb) {
-    if (nb < 12) {
+    if (nb > 0 && nb < 12) {
         return "enfant";
     } else if (nb >= 12 && nb < 18) {
         return "ado";
@@ -63,6 +63,9 @@ function getHumanTypeByAge(nb) {
         return "adulte";
     } else if (nb > 124) {
         return "incroyable";
+    }
+    else{
+        return "impossible";
     }
 }
 console.log(getHumanTypeByAge(-5));
